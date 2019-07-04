@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/Dao/UsuarioDao.java</file>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/view/TelaPrincipal.java</file>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/view/FrmManterUsuarios.java</file>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/view/Frmlogin.java</file>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/view/Pedidos.java</file>
+            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/model/Pizzas.java</file>
+            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/Dao/PizzasDao.java</file>
             <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/Dao/ConnectionFactory.java</file>
-            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/model/Usuario.java</file>
+            <file>file:/C:/Users/181810025/Documents/NetBeansProjects/AppModelo/src/br/com/senacrs/Dao/UsuarioDao.java</file>
         </group>
     </open-files>
 </project-private>

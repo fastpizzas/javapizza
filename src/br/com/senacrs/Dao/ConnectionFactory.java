@@ -13,7 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author 181810025
+ * @author 181810025 ArnaldoB L Culasso
  */
 public class ConnectionFactory {
     
