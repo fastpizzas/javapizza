@@ -5,7 +5,7 @@
  */
 package br.com.senacrs.Dao;
 
-import br.com.senacrs.model.Usuario;
+import br.com.senacrs.model.Pizzas;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -59,11 +59,12 @@ public class PizzasDao {
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("INSERT INTO tbpizzas (nomepiz,ingredientepiz,tamanhopiz,valorpiz)VALUES(?,?,?)");
-            stmt.setString(1, u.getNomePiz());
-            stmt.setString(2, u.getIngredientePiz());
-            stmt.setString(3, u.getTamnhoPiz());
-            stmt.setString(4, u.getValorPiz()); 
+            stmt = con.prepareStatement("INSERT INTO tbpizzas (nomepiz,ingredientespiz,valor,tamanhopiz)VALUES(?,?,?,?)");
+            stmt.setString(1, u.getNomepiz());
+            stmt.setString(2, u.getIngredientepiz());
+          
+            stmt.setDouble(3, u.getValorpiz());  
+            stmt.setString(4, u.getTamanhopiz());
 
             stmt.executeUpdate();
 
@@ -91,14 +92,14 @@ public class PizzasDao {
 
             while (rs.next()) {
 
-                Pizzas pizzas = new Pizzas();
+                Pizzas pizza = new Pizzas();
 
-                pizzas.setIdPiz(rs.getInt("idpiz"));
-                pizzas.setNomePiz(rs.getString("nomePiz"));
-                pizzas.setIngredientePiz(rs.getString("ingredientepiz"));
-                pizzas.setTamanhoPiz(rs.getString("tamanhopiz"));
-                pizzas.setValorPiz(rs.getString("valorpiz"));
-                pizzas.add(pizzas);
+                pizza.setIdpiz(rs.getInt("idpiz"));
+                pizza.setNomepiz(rs.getString("nomepiz"));
+                pizza.setIngredientepiz(rs.getString("ingredientespiz"));
+                pizza.setValorpiz(rs.getDouble("valor"));
+                pizza.setTamanhopiz(rs.getString("tamanhopiz")); 
+                pizzas.add(pizza);
             }
 
         } catch (SQLException ex) {
@@ -131,10 +132,10 @@ public class PizzasDao {
                 Pizzas pizzas = new Pizzas();
 
                 pizzas.setIdpiz(rs.getInt("idpiz"));
-                pizzas.setNomePiz(rs.getString("nomepiz"));
-                pizzas.setIngredientePiz(rs.getString("ingredientepiz"));
-                pizzas.setTamanhoPiz(rs.getString("tamanhopiz"));
-                pizzas.setValorPiz(rs.getString("valorpiz"));
+                pizzas.setNomepiz(rs.getString("nomepiz"));
+                pizzas.setIngredientepiz(rs.getString("ingredientepiz"));
+                pizzas.setTamanhopiz(rs.getString("tamanhopiz"));
+                pizzas.setValorpiz(rs.getDouble("valorpiz"));
                 produtos.add(pizzas);
             }
 
@@ -154,12 +155,13 @@ public class PizzasDao {
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("UPDATE tbpizzas SET nomepiz = ? ,ingredientepiz = ?,tamanhopiz = ?,valorpiz = ? WHERE idusu = ?");
-            stmt.setString(1, u.getNomePiz());
-            stmt.setString(2, u.getIngredientePiz());
-            stmt.setString(3, u.getTamanhoPiz());
-            stmt.setString(4,u.getValorPiz()); 
-            stmt.setInt(5, u.getIdPiz());
+            stmt = con.prepareStatement("UPDATE tbpizzas SET  nomepiz = ? ,ingredientespiz = ?,valor = ?, tamanhopiz = ? WHERE idpiz = ?");
+            stmt.setString(1, u.getNomepiz());
+            stmt.setString(2, u.getIngredientepiz());
+          
+            stmt.setDouble(3,u.getValorpiz());  
+            stmt.setString(4, u.getTamanhopiz());
+            stmt.setInt(5, u.getIdpiz());
 
             stmt.executeUpdate();
 
@@ -179,8 +181,8 @@ public class PizzasDao {
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("DELETE FROM tbpizzas WHERE idusu = ?");
-            stmt.setInt(1, u.getIdPiz());
+            stmt = con.prepareStatement("DELETE FROM tbpizzas WHERE idpiz = ?");
+            stmt.setInt(1, u.getIdpiz());
 
             stmt.executeUpdate();
 

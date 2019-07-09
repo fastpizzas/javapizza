@@ -10,21 +10,22 @@ package br.com.senacrs.model;
  * @author 181810025
  */
 public class Pizzas {
+
     private int idpiz;
     private String nomepiz;
     private String ingredientepiz;
+    private double valorpiz;
     private String tamanhopiz;
-    private String valorpiz;
 
     public Pizzas() {
     }
 
-    public Pizzas(int idpiz, String nomepiz, String ingredientepiz, String tamanhopiz, String valorpiz) {
+    public Pizzas(int idpiz, String nomepiz, String ingredientepiz, double valorpiz, String tamanhopiz) {
         this.idpiz = idpiz;
         this.nomepiz = nomepiz;
         this.ingredientepiz = ingredientepiz;
-        this.tamanhopiz = tamanhopiz;
         this.valorpiz = valorpiz;
+        this.tamanhopiz = tamanhopiz;
     }
 
     public int getIdpiz() {
@@ -51,6 +52,14 @@ public class Pizzas {
         this.ingredientepiz = ingredientepiz;
     }
 
+    public double getValorpiz() {
+        return valorpiz;
+    }
+
+    public void setValorpiz(double valorpiz) {
+        this.valorpiz = valorpiz;
+    }
+
     public String getTamanhopiz() {
         return tamanhopiz;
     }
@@ -58,19 +67,5 @@ public class Pizzas {
     public void setTamanhopiz(String tamanhopiz) {
         this.tamanhopiz = tamanhopiz;
     }
-
-    public String getValorpiz() {
-        return valorpiz;
-    }
-
-    public void setValorpiz(String valorpiz) {
-        this.valorpiz = valorpiz;
-    }
-
-    @Override
-    public String toString() {
-        return "Pizzas{" + "idpiz=" + idpiz + ", nomepiz=" + nomepiz + ", ingredientepiz=" + ingredientepiz + ", tamanhopiz=" + tamanhopiz + ", valorpiz=" + valorpiz + '}';
-    }
-    
 
 }

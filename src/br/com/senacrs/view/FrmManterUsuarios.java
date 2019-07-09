@@ -103,6 +103,12 @@ public class FrmManterUsuarios extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Código");
 
+        edCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edCodigoActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome do Usuário");
 
@@ -118,7 +124,6 @@ public class FrmManterUsuarios extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Senha");
 
-        edSenha.setText("jPasswordField1");
         edSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 edSenhaActionPerformed(evt);
@@ -365,6 +370,10 @@ public class FrmManterUsuarios extends javax.swing.JFrame {
     private void edNomeUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edNomeUsuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_edNomeUsuActionPerformed
+
+    private void edCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_edCodigoActionPerformed
 
     /**
      * @param args the command line arguments

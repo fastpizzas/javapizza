@@ -218,6 +218,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="edCodigo">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edCodigoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -251,9 +254,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="edSenha">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edSenhaActionPerformed"/>
               </Events>
