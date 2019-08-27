@@ -86,6 +86,7 @@ public final class FrmCliente extends javax.swing.JFrame {
         btPesquisar = new javax.swing.JButton();
         Fundo = new javax.swing.JPanel();
         lbTitulo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro Cliente");
@@ -260,6 +261,9 @@ public final class FrmCliente extends javax.swing.JFrame {
         );
 
         getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, -1));
+
+        jLabel1.setText("By Pizzaiolos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 660, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -452,6 +456,7 @@ public final class FrmCliente extends javax.swing.JFrame {
     private javax.swing.JTextField edRua;
     private javax.swing.JTextField edSenha;
     private javax.swing.JTextField edTelefone;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lbBairro;
     private javax.swing.JLabel lbCelular;
