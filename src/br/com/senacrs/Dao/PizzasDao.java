@@ -62,7 +62,6 @@ public class PizzasDao {
             stmt = con.prepareStatement("INSERT INTO tbpizzas (nomepiz,ingredientespiz,valor,tamanhopiz)VALUES(?,?,?,?)");
             stmt.setString(1, u.getNomepiz());
             stmt.setString(2, u.getIngredientepiz());
-          
             stmt.setDouble(3, u.getValorpiz());  
             stmt.setString(4, u.getTamanhopiz());
 
@@ -131,11 +130,12 @@ public class PizzasDao {
 
                 Pizzas pizzas = new Pizzas();
 
-                pizzas.setIdpiz(rs.getInt("idpiz"));
+                pizzas.setIdpiz(rs.getInt("pkidpiz"));
                 pizzas.setNomepiz(rs.getString("nomepiz"));
-                pizzas.setIngredientepiz(rs.getString("ingredientepiz"));
+                pizzas.setIngredientepiz(rs.getString("ingredientespiz"));
+                pizzas.setValorpiz(rs.getDouble("valor"));
                 pizzas.setTamanhopiz(rs.getString("tamanhopiz"));
-                pizzas.setValorpiz(rs.getDouble("valorpiz"));
+                
                 produtos.add(pizzas);
             }
 
@@ -165,9 +165,9 @@ public class PizzasDao {
 
             stmt.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Pedido Realizado  !");
+            JOptionPane.showMessageDialog(null, "Pedido alterado com sucesso  !");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro no Pedido: " + ex);
+            JOptionPane.showMessageDialog(null, "Erro no pedido com sucesso: " + ex);
         } finally {
             ConnectionFactory.closeConnection(con, stmt);
         }
